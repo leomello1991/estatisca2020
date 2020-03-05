@@ -1,71 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+    
+        function funcaoLogin() {
+            let usuario = document.querySelectorAll('user').value;
+            let senha = document.querySelectorAll('password').value;
+            if (usuario !== "" && senha !== "") {
+                window.location.href = "";
+                alert("Deu certo")
+            } else {
+                document.getElementById('user').value = "";
+                document.getElementById('password').value = "";
+                alert("Preencha todos os campos!");
+            };
+        };
+    
+    </script>
+</head>
+<body>
 
-<div class=" text-center col-md-4 InserirDados mb-5" id="LoginEntrar">
-    <h1 >Entrar</h1>
-    <form>
-        <div class="form-row">
-            <div class="form-group col-12 mt-3">
-                <label for="VariavelPesquisada">E-mail:</label>
-                <input type="text" class="form-control" name="user" id="user" placeholder="E-mail">
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-12">
-                <label for="VariavelPesquisada">Senha:</label>
-                <input type="text" class="form-control" name="password" id="password" placeholder="Senha">
-            </div>
-        </div>
-         
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
-          <p class="mt-5 mb-3 text-muted">© 2020</p>
-    </form>
-</div>
+    <div class="text-center col-md-5 InserirDados  float-left ml-4  p-4 my-5 mx-5  " style="width: 31rem; height: 30rem;">
+            <h1 class="display-7">Entrar</h1>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-12 mt-3"> 
+                        <label for="VariavelPesquisada"></label>
+                        <input type="text" class="form-control" name="user" id="user" placeholder="E-mail">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <label for="VariavelPesquisada"></label>
+                        <input type="text" class="form-control" name="password" id="password" placeholder="Senha">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <input type="button" class="btn btn-lg btn-primary btn-block" value="Entrar" onclick="funcaoLogin()">
+                </div>
+    
+            </form>
 
-  <div class=" text-center col-md-4 InserirDados mb-5" id="LoginCadastra">
-        <h1 >Cadastrar-se</h1>
+        </div>
+    
+    
+    <div class="   text-center col-md-5 InserirDados  float-right ml-4  p-4 my-5 mx-5 " style="width: 31rem; height: 30rem;">
+        <h1 class="display-7">Cadastrar-se</h1>
         <form>
             <div class="form-row">
                 <div class="form-group col-12 mt-3">
-                    <label for="VariavelPesquisada">E-mail:</label>
+                    <label for="VariavelPesquisada"></label>
                     <input type="text" class="form-control" name="user" id="user" placeholder="E-mail">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-12">
-                    <label for="VariavelPesquisada">Senha:</label>
+                    <label for="VariavelPesquisada"></label>
                     <input type="text" class="form-control" name="password" id="password" placeholder="Senha">
                 </div>
             </div>
             <div class="form-row">
-              <div class="form-group col-12">
-                  <label for="VariavelPesquisada">Digite novamente sua senha:</label>
-                  <input type="text" class="form-control" name="password" id="password" placeholder="Senha">
-              </div>
-          </div>
-            <!-- <div class="form-row">
-                <input type="button" class="btn btn-warning mb-3" value="Entrar" onclick="login()">
-            </div> -->
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
-              <p class="mt-5 mb-3 text-muted">© 2020</p>
-        </form>
-    </div>
+                <div class="form-group col-12">
+                    <label for="VariavelPesquisada"></label>
+                    <input type="text" class="form-control" name="password" id="password" placeholder="Digite novamente sua senha:">
+                </div>
+            </div>
+            <div class="form-row">
+                <input type="button" class="btn btn-lg btn-primary btn-block" value="Entrar" onclick="funcaoLogin()">
+            </div>
 
-      
-    
-<style>
-    #LoginEntrar{
-      
-      margin-bottom: 10%;
-        margin-left: 10%;
-        margin-top: 10%;
-    
-    }
-    #LoginCadastra{
-      
-        margin-top: -30%;
-        margin-left: 60%;
-        margin-right: 20%;
+        </form>
         
-    }
+        
+        
+    </div>
+   
     
-    </style>
+    <!-- <div>
+        <br>
+        <p>Network Statistic</p>
+    </div> -->
+
+
+</body>
+</html>
     
