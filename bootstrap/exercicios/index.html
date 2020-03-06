@@ -7,40 +7,40 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Network Statistic</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    
-    <a class="navbar-brand" wm-link="#paginas/index.html">Network Statistic</a>
-    
-    
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 " id="BarradeMenu">
 
-        <a class="nav-item nav-link active" wm-link="#paginas/EstDesc.html">Estatística Descritiva <span
-            class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" wm-link="#paginas/Probab.html">Probabilidade</a>
-        <a class="nav-item nav-link" wm-link="#paginas/CorRegress.html">Correlação e Regressão</a>
-        
+      <a class="navbar-brand" wm-link="#paginas/bemVindo.html">Network Statistic</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+
+          <a class="nav-item nav-link active" wm-link="#paginas/EstDesc.html">Estatística Descritiva <span
+              class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" wm-link="#paginas/Probab.html">Probabilidade</a>
+          <a class="nav-item nav-link" wm-link="#paginas/CorRegress.html">Correlação e Regressão</a>
+
+        </div>
+
       </div>
-       
-    </div>
-    <div class="col-3  justify-content-end align-items-center">
-      <a class=" navbar-brand  float-right" wm-link="#paginas/login.html">Login</a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      <a class="nav-item nav-link" wm-link="#paginas/index.html"></a>
-     
-    </button>
-    
-  </nav>
+      <div class="col-3  justify-content-end">
+        <a class=" navbar-brand  float-right" wm-link="#paginas/login.html">Login</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <a class="nav-item nav-link" wm-link="#paginas/index.html"></a>
 
+      </button>
 
+    </nav>
+  </div>
+  
   <!--Colocar a página em um local, p-3 é uma classe dominio-->
-  <main class="p-3" wm-link-destino></main>
+  <main class="p-0" wm-link-destino></main>
   <!--   
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -58,8 +58,6 @@
 
 
   </div>
-
-
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
