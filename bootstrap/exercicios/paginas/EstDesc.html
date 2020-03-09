@@ -2,14 +2,17 @@
 <html>
 
 <head>
-   
+
 </head>
 
 <body>
-    <div class="jumbotron p-4 my-1" >
+
+
+
+    <!-- <div class="jumbotron p-4 my-1" >
         <h1 class="display-4">Estatística Descritiva</h1>
         <p class="lead m-1">Inserir descrição do módulo!</p>
-    </div>
+    </div> -->
     <!-- Breadcrumb -->
     <!--Primeira opcao-->
     <!-- <div class="container jumbotron p-4 my-5">
@@ -47,8 +50,8 @@
         <br>
         <hr>
     </div>  -->
-<!--SEGUNDA OPCAO-->
-   <div>
+    <!--SEGUNDA OPCAO-->
+    <!-- <div>
     <div class="jumbotron   border float-left ml-4  p-4 my-5 mx-5" style="width: 35rem; height: 20rem;">
         <form>
             <div class="form-group text-center" style="font-weight: bold; font-size: 2rem;" >
@@ -99,10 +102,10 @@
     </div>
     <div class="container col-md-5">
         <div class="mt-4 mb-4" id="resultado"></div>
-    </div>  
+    </div>  -->
 
-<!--TERCEIRA OPÇAO-->
-     <!-- <div>
+    <!--TERCEIRA OPÇAO-->
+    <!-- <div>
         <div class="jumbotron   border float-left col-md-20 p-4 my-3 " style="width: 31rem; height: 40rem;">
             <form>
                 <div class="form-group text-center">
@@ -144,10 +147,10 @@
 
 
             </form>
-        </div>
-  -->
+        </div> -->
 
-        <!-- <div class="jumbotron border float-right col-md-20 col-md-20 p-4 my-3" style="width: 50rem; height: 40rem;">
+    <!-- 
+         <div class="jumbotron border float-right col-md-20 col-md-20 p-4 my-3" style="width: 50rem; height: 40rem;">
 
 
             <div class="container">
@@ -161,8 +164,73 @@
 
             </div>
 
-        </div>
+        </div> -->
+
+
+    <div class="grid-container">
+        <header class="header">
+            <H5>ESTATÍSTICA DESCRITIVA </H5></header>
+        <aside class="sidenav"></aside>
+        <main class="main">
+            <div class="main-overview">
+
+            </div>
+            <div class="main-cards">
+                <div class="card">
+                    <form>
+                        <div class="form-group text-center col-md-30">
+                            <h6>Especificação dos dados</h6>
+                            <input type="text" class="form-control" name="variavel" id="variavel"
+                                placeholder="Nome da variável.">
+                        </div>
+                        <div class="form-group ">
+                            <div class="form-group col-md-9">
+                                <input type="radio" name="processos" value="0" checked> População<br>
+                                <input type="radio" name="processos" value="1"> Amostra<br><br>
+                            </div>
+                        </div>
+                        <form>
+                            <div class="form-group text-center">
+                                <h6>Variável pesquisada</h6>
+                                <input type="text" class="form-control" name="variavel" id="variavel"
+                                    placeholder="Nome da variável.">
+                            </div>
+                            <div class="form-group ">
+                                <input class="botao-radio" type="radio" name="tipo" value="qualiNominal" checked>
+                                Qualitativa
+                                Nominal<br>
+                                <input class="botao-radio" type="radio" name="tipo" value="qualiOrdinal"> Qualitativa
+                                Ordinal<br>
+                                <input class="botao-radio" type="radio" name="tipo" value="quantDiscreta"> Quantitativa
+                                Discreta<br>
+                                <input class="botao-radio" type="radio" name="tipo" value="quantContinua"> Quantitativa
+                                Contínua<br><br>
+                            </div>
+
+                            <div class="form-row justify-content-center ml-0  p-0 my-0 mx-5">
+                                <input type="button" class="btn btn-dark" value="Calcular" onclick="">
+                            </div>
+                        </form>
+
+
+                    </form>
+
+                </div>
+                
+                <div class="card">Tabelas</div>
+                <div class="card">Local dos gráficos</div>
+            </div>
+
+
+    </div>
+    <div>
+
+        </main>
+    </div>
+
+
 
 </body>
+
 
 </html>

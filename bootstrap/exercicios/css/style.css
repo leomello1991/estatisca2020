@@ -5,33 +5,30 @@
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 350px;
-	width: 100%;
-
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+    width: 100%;
     
-
 }
+.rowcentered{
+  color:  cornsilk;
+}
+
+
 #FundoPaginasContas{
     background: url('http://localhost:8081/exemplo5.jpg') no-repeat center ;
 
 	padding-top: 5px;
 	background-attachment: relative;
-	background-position: center center;
-	/* height: 1001px; */
+	background-position: center center; 
+	 height: 1001px; 
     width: 100%;
     z-index: 0;
     left: 30px;
-    top: 30px;
+    top: 30px; 
 
-}
+ }
+
  #InterfaceDescritiva{
-    z-index: 1; 
-    
-    display: block;
-    
+    display: block; 
     position: absolute;
     text-align: center;
    
@@ -52,60 +49,7 @@
     height: 100vh;
  }
 
- .header{
-    grid-area: header;
-    background-color: #648ca6;
-}
 
-.sidenav{
-    grid-area: sidenav;
-    background-color: #394263;
-}
-.main{
-    grid-area: main;
-    background-color: #8fd4d9;
-}
-.footer{
-    grid-area: footer;
-    background-color: #648ca6;
-}
-
-.header, .footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    background-color: #648ca6;
-    
-}
-.sidenav{
-    display: flex;
-    flex-direction: column;
-    grid-area: sidenav;
-    background-color: #394263;
-}
-.sidenav_list{
-    padding: 0;
-    margin-top: 85px;
-    list-style-type: none;
-}
-
-.sidenav_list-item{
-    padding: 20px 20px 20px 40px;
-    color:#ddd
-}
-
-.sidenav_list-item:hover{
-    background-color: rgba(255, 255, 255, 0.2);
-    cursor:pointer
-}
- 
-
-
-#BarradeMenu{
-    z-index: 1;
-    opacity:0.8;
-}
 body {
     background-color: #f2f2f2;
     font-family: 'Ruda', sans-serif;
@@ -116,23 +60,23 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 
-}
+} 
 
 /* Titles */
-h1, h2, h3, h4, h5, h6 {
+ h1, h2, h3, h4, h5, h6 {
     font-family: 'Ruda', sans-serif;
     font-weight: 900;
     color: #333;
     
-}
+} 
 
 
 /* Paragraph & Typographic */
 p {
     line-height: 28px;
     margin-bottom: 25px;
-}
-
+} 
+ 
 .centered {
     text-align: center;
 }
@@ -145,15 +89,16 @@ p {
 .spacing i {
 	padding-left: 8px;
 	padding-right: 8px
-}
+} 
+
 /* margin top & Bottom */
 .mt {
 	margin-top: 50px;
 	margin-bottom: 50px;
-}
+} 
 
 /* Special Margin for Wrap sections */
-.mts {
+ .mts {
 	margin-top: -20px;
 }
 .desc p {
@@ -170,4 +115,220 @@ p {
 	font-weight: 900;
 	letter-spacing: 1px;
 	visibility: hidden;
+} 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    "sidenav header"
+    "sidenav main"
+    "sidenav footer";
+  height: 100%;
+  
+
+
+
 }
+
+/* Give every child element its grid name */
+.header {
+  grid-area: header;
+  background-color: #648ca6;
+  height: 50px;
+}
+
+.sidenav {
+  grid-area: sidenav;
+  background-color: #394263;
+}
+
+.main {
+  grid-area: main;
+ 
+}
+
+
+
+.header, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #648ca6;
+  }
+
+  .sidenav {
+    display: flex; /* Will be hidden on mobile */
+    flex-direction: column;
+    grid-area: sidenav;
+    background-color: #394263;
+  }
+
+  
+
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 20px;
+    padding: 20px;
+    height: 150px; /* Force our height since we don't have actual content yet */
+    background-color: #e3e4e6;
+    color: slategray;
+    position: relative;
+    top: 0px;
+    width: 100%;
+    
+}
+
+      .main-cards {
+        column-count: 2;
+        column-gap: 20px;
+        margin: 20px;
+        width: 100%;
+      }
+      
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #82bef6;
+        margin-bottom: 20px;
+        -webkit-column-break-inside: avoid;
+        padding: 24px;
+        box-sizing: border-box;
+      }
+    
+      /* Force varying heights to simulate dynamic content */
+      
+      
+      .card:first-child {
+        height: 485px;
+        background-color:  white;
+        
+        
+      }
+    
+      .card:nth-child(2) {
+        height: 200px;
+        background-color: white
+       
+      }
+
+      .card:nth-child(3) {
+        height: 265px;
+        background-color: white;
+        border: none;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Side nav is hidden on mobile */
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas:
+          'header'
+          'main'
+          'footer';
+        height: 100vh;
+      }
+      
+      .sidenav {
+        display: none;
+        grid-area: sidenav;
+        background-color: #394263;
+      }
+      
+      .main-cards {
+        column-count: 1;
+        column-gap: 20px;
+        margin: 20px;
+      }
+      
+      /* Non-mobile styles, 750px breakpoint */
+      @media only screen and (min-width: 46.875em) {
+        /* Show the sidenav */
+        .grid-container {
+          grid-template-columns: 240px 1fr; /* Show the side nav for non-mobile screens */
+          grid-template-areas:
+            "sidenav header"
+            "sidenav main"
+            "sidenav footer";
+        }
+    
+        .sidenav {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    
+      /* Medium-sized screen breakpoint (tablet, 1050px) */
+      @media only screen and (min-width: 65.625em) {
+        /* Break out main cards into two columns */
+        .main-cards {
+          column-count: 2;
+        }
+      }
+      .menu-icon {
+        position: fixed;
+        display: flex;
+        top: 5px;
+        left: 10px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 1;
+        cursor: pointer;
+        padding: 12px;
+        background-color: #DADAE3;
+      }
+      
+      /* Make room for the menu icon on mobile */
+      .header__search {
+        margin-left: 42px;
+      }
+      
+      /* Mobile-first side nav styles */
+      .sidenav {
+        grid-area: sidenav;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 240px;
+        position: fixed;
+        overflow-y: auto;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+        z-index: 2; /* Needs to sit above the hamburger menu icon */
+        background-color: #394263;
+        transform: translateX(-245px);
+        transition: all .6s ease-in-out;
+      }
+      
+      /* The active class is toggled on hamburger and close icon clicks */
+      .sidenav.active {
+        transform: translateX(0);
+      }
+      
+      /* Only visible on mobile screens */
+      .sidenav__close-icon {
+        position: absolute;
+        visibility: visible;
+        top: 8px;
+        right: 12px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #ddd;
+      }
+      
+      /* Non-mobile styles for side nav responsiveness, 750px breakpoint */
+      @media only screen and (min-width: 46.875em) {
+        .sidenav {
+          position: relative; /* Fixed position on mobile */
+          transform: translateX(0);
+        }
+      
+        .sidenav__close-icon {
+          visibility: hidden;
+        }
+      }        
