@@ -24,14 +24,15 @@ function mostrarValor(){
 
   //calculo amplitude
   let calculo = (resultado, freq) =>{
-     resultado = soNumeros[soNumeros.length-1] - soNumeros[0]
+     this.resultado = soNumeros[soNumeros.length-1] - soNumeros[0]
   //calculo frequencia
-     freq = Math.floor(Math.sqrt(resultado))
-    return console.log(resultado, freq)
+     this.freq = Math.floor(Math.sqrt(soNumeros.length))
+    return console.log(`o valor da amplitude é ${this.resultado}, e o valor de ${this.freq}`)
   }
   calculo()
   // até aqui ok
-
+  let resultado = this.resultado
+  let freq = this.freq
   let a = freq+1
   let b = freq-1
 
@@ -42,18 +43,32 @@ function mostrarValor(){
     
   }while(resultado % freq != 0 && amplitute % a != 0 && amplitute % b != 0)
 
-  if(amplitute % freq == 0 || amplitute % a == 0 || amplitute % b == 0){
+  let Valorintervalo = 0
+
+  if(resultado % freq == 0 ){
     
+    Valorintervalo = resultado/freq
      
+  }else if(resultado % a == 0){
+    Valorintervalo = resultado/freq
+  }else if (resultado % freq == 0){
+    Valorintervalo = resultado % freq
+  }
+  for(let i = 0; i < soNumeros.length-1; i++){
+    
   }
 
+let body = document.getElementsByTagName("body")[0]
+
+let tabela = document.createElement("table")
+let tbBody = document.createElement("tbody")
+
+for(let i = 0;)
+
+console.log(intervalo)
+  
+console.log(soNumeros)
   
 
-
-
- 
-  console.log(soNumeros)
-  
-   
 }
 
