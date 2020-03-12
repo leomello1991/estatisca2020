@@ -1,9 +1,9 @@
-// pegando o valor da variavel
+// pegando o valor da variavel continua discritiva
 
 function mostrar(){
 const nome = document.getElementById('nomeVariavel').value
 
-//até aqui funcionou
+
 //console.log(nome)
 
 }
@@ -47,13 +47,6 @@ function mostrarValor(){
      
   }
 
-  
-
-
-
- 
-  console.log(soNumeros)
-  
    
 }
 
