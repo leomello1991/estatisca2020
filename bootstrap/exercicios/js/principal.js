@@ -24,14 +24,15 @@ function mostrarValor(){
 
   //calculo amplitude
   let calculo = (resultado, freq) =>{
-     resultado = soNumeros[soNumeros.length-1] - soNumeros[0]
+     this.resultado = soNumeros[soNumeros.length-1] - soNumeros[0]
   //calculo frequencia
-     freq = Math.floor(Math.sqrt(resultado))
-    return console.log(resultado, freq)
+     this.freq = Math.floor(Math.sqrt(soNumeros.length))
+    return console.log(`o valor da amplitude é ${this.resultado}, e o valor de frequencia ${this.freq}`)
   }
   calculo()
   // até aqui ok
-
+  let resultado = this.resultado
+  let freq = this.freq
   let a = freq+1
   let b = freq-1
 
@@ -40,13 +41,63 @@ function mostrarValor(){
     resultado++
 
     
-  }while(resultado % freq != 0 && amplitute % a != 0 && amplitute % b != 0)
+  }while(resultado % freq != 0 && resultado % a != 0 && resultado % b != 0)
 
-  if(amplitute % freq == 0 || amplitute % a == 0 || amplitute % b == 0){
+  let Valorintervalo = 0
+
+  let linha = 0
+
+
+  if(resultado % freq == 0 ){
     
+    Valorintervalo = resultado/freq
+    this.linha = freq
      
+  }else if(resultado % a == 0){
+    Valorintervalo = resultado/a
+    this.linha = a
+  }else if (resultado % b == 0){
+    Valorintervalo = resultado % b
+    this.linha = b
   }
+ 
 
+<<<<<<< HEAD
    
+=======
+  // class = 
+
+  function tableCreate(){
+    let tabbody = document.getElementById('tabela')
+
+    let tabela = document.createElement("table")
+    let tbBody = document.createElement("tbody")
+
+    for(var i = 0; i < linha ; i++){
+
+        var tr = document.createElement("tr")
+      for(var j=0; j <2; j++){
+        if(i ==2 && j  == 1){
+          break
+        }else{
+          var td = document.createElement('td')
+          td.appendChild(document.createTextNode('algo'))
+          i ==1 && j ==1 ? td.setAttribute('rowSpan','2'):null
+          tr.appendChild(linha).value
+        }
+      }
+      tbBody.appendChild(tr)
+    }
+    tabela.appendChild(tbBody)
+    tabbody.appendChild(tabela)
+  } 
+tableCreate()
+
+// console.log(intervalo)
+  
+// console.log(soNumeros)
+  
+
+>>>>>>> 978ca21473360fa6a528cb3d3f11e611ec02f494
 }
 
