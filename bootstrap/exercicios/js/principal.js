@@ -27,7 +27,7 @@ function mostrarValor(){
      this.resultado = soNumeros[soNumeros.length-1] - soNumeros[0]
   //calculo frequencia
      this.freq = Math.floor(Math.sqrt(soNumeros.length))
-    return console.log(`o valor da amplitude é ${this.resultado}, e o valor de ${this.freq}`)
+    return console.log(`o valor da amplitude é ${this.resultado}, e o valor de frequencia ${this.freq}`)
   }
   calculo()
   // até aqui ok
@@ -41,33 +41,58 @@ function mostrarValor(){
     resultado++
 
     
-  }while(resultado % freq != 0 && amplitute % a != 0 && amplitute % b != 0)
+  }while(resultado % freq != 0 && resultado % a != 0 && resultado % b != 0)
 
   let Valorintervalo = 0
+
+  let linha = 0
+
 
   if(resultado % freq == 0 ){
     
     Valorintervalo = resultado/freq
+    this.linha = freq
      
   }else if(resultado % a == 0){
-    Valorintervalo = resultado/freq
-  }else if (resultado % freq == 0){
-    Valorintervalo = resultado % freq
+    Valorintervalo = resultado/a
+    this.linha = a
+  }else if (resultado % b == 0){
+    Valorintervalo = resultado % b
+    this.linha = b
   }
-  for(let i = 0; i < soNumeros.length-1; i++){
-    
-  }
+ 
 
-let body = document.getElementsByTagName("body")[0]
+  // class = 
 
-let tabela = document.createElement("table")
-let tbBody = document.createElement("tbody")
+  function tableCreate(){
+    let tabbody = document.getElementById('tabela')
 
-for(let i = 0;)
+    let tabela = document.createElement("table")
+    let tbBody = document.createElement("tbody")
 
-console.log(intervalo)
+    for(var i = 0; i < linha ; i++){
+
+        var tr = document.createElement("tr")
+      for(var j=0; j <2; j++){
+        if(i ==2 && j  == 1){
+          break
+        }else{
+          var td = document.createElement('td')
+          td.appendChild(document.createTextNode('algo'))
+          i ==1 && j ==1 ? td.setAttribute('rowSpan','2'):null
+          tr.appendChild(linha).value
+        }
+      }
+      tbBody.appendChild(tr)
+    }
+    tabela.appendChild(tbBody)
+    tabbody.appendChild(tabela)
+  } 
+tableCreate()
+
+// console.log(intervalo)
   
-console.log(soNumeros)
+// console.log(soNumeros)
   
 
 }
