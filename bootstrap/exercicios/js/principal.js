@@ -23,81 +23,90 @@ function mostrarValor(){
   })
 
   //calculo amplitude
-  let calculo = (resultado, freq) =>{
+  let calculo = (resultado, linha) =>{
      this.resultado = soNumeros[soNumeros.length-1] - soNumeros[0]
   //calculo frequencia
-     this.freq = Math.floor(Math.sqrt(soNumeros.length))
+     this.linha = Math.floor(Math.sqrt(soNumeros.length))
     return console.log(`o valor da amplitude é ${this.resultado}, e o valor de frequencia ${this.freq}`)
   }
   calculo()
   // até aqui ok
   let resultado = this.resultado
-  let freq = this.freq
-  let a = freq+1
-  let b = freq-1
+  let linha = this.linha
+  let a = linha+1
+  let b = linha-1
 
   do{
 
     resultado++
 
     
-  }while(resultado % freq != 0 && resultado % a != 0 && resultado % b != 0)
+  }while(resultado % linha != 0 && resultado % a != 0 && resultado % b != 0)
 
   let Valorintervalo = 0
 
-  let linha = 0
+  let qtdeLinha = 0
 
 
-  if(resultado % freq == 0 ){
+  if(resultado % linha == 0 ){
     
-    Valorintervalo = resultado/freq
-    this.linha = freq
+    Valorintervalo = resultado/linha
+    this.qtdelinha = linha
      
   }else if(resultado % a == 0){
     Valorintervalo = resultado/a
-    this.linha = a
+    this.qtdeLinha = a
   }else if (resultado % b == 0){
     Valorintervalo = resultado % b
-    this.linha = b
+    this.qtdeLinha = b
   }
+ let frequencia = []
+
+ for(let i = 0 ; i <= soNumeros.length; i++){
+   if(soNumeros[i] != soNumeros[i+1]){
+     frequencia.push(soNumeros[i])
+   }
+ }
  
-
-<<<<<<< HEAD
-   
-=======
-  // class = 
-
-  function tableCreate(){
-    let tabbody = document.getElementById('tabela')
-
-    let tabela = document.createElement("table")
-    let tbBody = document.createElement("tbody")
-
-    for(var i = 0; i < linha ; i++){
-
-        var tr = document.createElement("tr")
-      for(var j=0; j <2; j++){
-        if(i ==2 && j  == 1){
-          break
-        }else{
-          var td = document.createElement('td')
-          td.appendChild(document.createTextNode('algo'))
-          i ==1 && j ==1 ? td.setAttribute('rowSpan','2'):null
-          tr.appendChild(linha).value
-        }
-      }
-      tbBody.appendChild(tr)
+ 
+  let contador = soNumeros.reduce(function(todos, repeticao){
+    if(repeticao in todos){
+      todos[repeticao]++
+    }else{
+      todos[repeticao] =1
     }
-    tabela.appendChild(tbBody)
-    tabbody.appendChild(tabela)
-  } 
-tableCreate()
-
-// console.log(intervalo)
+    return todos
+  }, {})
+  console.log(contador)
+   
+  var table = document.getElementById('tabela');// sugestão, coloque um id na tabela para usar getElementById.
+  var tbody = document.getElementById('tbody');
   
-// console.log(soNumeros)
+  // limpar tbody
   
+  // tbody.innerHTML="";
+  
+  //adicionar as linha na tabela
+  
+  for(var i=0; i< frequencia.length; i++){
+           tbody.innerHTML += "<tr><td>"+frequencia[i]+"</td><td>"+contador[i]+"</td><td>";                          
+  }
+         /*                       
+  //  
+                                
+  for(var i=0, carro; carro = carros[i]; i++){
+           tbody.innerHTML += "<tr><td>"+carro.placa+"</td><td>"+carro.ano+"</td><td>"+carro.fabricante+"</td><td>"+carro.modelo+"</td></tr>";                          
+  }   
+                                
+  //
+                                
+  for(var i=0, carro; carro = carros[i]; i++){
+           tbody.innerHTML += `<tr><td>${carro.placa}</td><td>${carro.ano}</td><td>${carro.fabricante}</td><td>${carro.modelo}</td></tr>`;                          
+  }                              
+*/
+  
+   
 
->>>>>>> 978ca21473360fa6a528cb3d3f11e611ec02f494
+
 }
 
